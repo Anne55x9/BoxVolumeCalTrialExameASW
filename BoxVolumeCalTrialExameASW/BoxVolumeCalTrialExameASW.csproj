@@ -65,6 +65,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxCalRequest.cs" />
     <Compile Include="BoxCalService.svc.cs">
       <DependentUpon>BoxCalService.svc</DependentUpon>
     </Compile>

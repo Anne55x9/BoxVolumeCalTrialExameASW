@@ -42,6 +42,7 @@ namespace BoxVolumeCalTrialExameASW
         public double GetSide(double volume, double side1, double side2)
         {
             return volume / (side1 * side2);
+           
         }
 
         /// <summary>
@@ -67,16 +68,7 @@ namespace BoxVolumeCalTrialExameASW
                     insertCommand.Parameters.AddWithValue("@height", height);
 
                     insertCommand.ExecuteNonQuery();
-
-                    //using (SqlDataReader reader = insertCommand.ExecuteReader()) 
-                    //{
-                    //    List<Student> studentList = new List<Student>();
-                    //    while (reader.Read())
-                    //    {
-                    //        Student st = ReadStudent(reader);
-                    //        studentList.Add(st);
-                    //    }
-                    //}
+               
                 }
             }
         }
