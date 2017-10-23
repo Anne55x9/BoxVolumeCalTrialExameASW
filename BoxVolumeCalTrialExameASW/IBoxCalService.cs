@@ -26,8 +26,23 @@ namespace BoxVolumeCalTrialExameASW
         [OperationContract]
         double GetSide(double volume, double side1, double side2);
 
+        /// <summary>
+        /// Metode til at indsætte udregninger i azur tabel.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="volume"></param>
+        /// <param name="length"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
         [OperationContract]
         void InsertBoxCalRequest(String request, double volume, double length, double width, double height);
+
+        /// <summary>
+        /// Metode til at se alle udregninger fra azure tabel.
+        /// </summary>
+        /// <returns></returns>
+        [OperationContract]
+        IList<BoxCalRequest> GetAllRequest();
     }
 
 

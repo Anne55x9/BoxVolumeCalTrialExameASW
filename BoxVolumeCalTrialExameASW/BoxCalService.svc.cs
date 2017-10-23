@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -72,5 +73,52 @@ namespace BoxVolumeCalTrialExameASW
                 }
             }
         }
+
+        /// <summary>
+        /// Metode som henter alle udregninger i azure tabel.
+        /// </summary>
+        /// <returns></returns>
+        public IList<BoxCalRequest> GetAllRequest()
+        {
+            const string selectAllRequests = "select * from boxcalrequest order by request";
+
+            using (SqlConnection databaseConnection = new SqlConnection(connectionString))
+            {
+                databaseConnection.Open();
+                using (SqlCommand selectCommand = new SqlCommand(selectAllRequests, databaseConnection))
+                {
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        List<BoxCalRequest> requestList = new List<BoxCalRequest>();
+                        while (reader.Read())
+                        {
+                            BoxCalRequest requests = ReadRequest(reader);
+                            requestList.Add(requests);
+                        }
+                        return requestList;
+                    }
+                }
+            }
+        }
+
+        private static BoxCalRequest ReadRequest(IDataRecord reader)
+        {
+            
+            string request = reader.GetString(0);
+            double volume = reader.GetDouble(1);
+            double length = reader.GetDouble(2);
+            double width = reader.GetDouble(3);
+            double height = reader.GetDouble(4);
+            BoxCalRequest req = new BoxCalRequest()
+            {
+                Request = request,
+                Volume = volume,
+                Length = length,
+                Width = width,
+                Height = height,
+            };
+            return req;
+        }
+
     }
 }
