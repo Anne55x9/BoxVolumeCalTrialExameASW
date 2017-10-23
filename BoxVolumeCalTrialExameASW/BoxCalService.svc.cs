@@ -20,6 +20,7 @@ namespace BoxVolumeCalTrialExameASW
         private const string connectionString =
             "Server=tcp:annesazure.database.windows.net,1433;Initial Catalog=EasjDBasw;Persist Security Info=False;User ID=anne55x9;Password=Easj2017;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
+
         /// <summary>
         /// Metode GetVolume og GetSide som henholdvis retunere et volumen af en boks. 
         /// </summary>
