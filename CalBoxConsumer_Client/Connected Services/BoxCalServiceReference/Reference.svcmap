@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3e54123f-6674-479a-b820-fa03614e0634" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d93de8a3-1ac3-4e48-8cb7-21396e39aae6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49903/BoxCalService.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://boxvolumecaltrialexameasw20171023120355.azurewebsites.net/BoxCalService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="BoxCalService.xsd" MetadataType="Schema" ID="bab55976-0945-49d9-8307-30b7b271fb70" SourceId="1" SourceUrl="http://localhost:49903/BoxCalService.svc?xsd=xsd0" />
-    <MetadataFile FileName="BoxCalService.wsdl" MetadataType="Wsdl" ID="06e9d842-f131-4c59-a4f8-27e782c70c40" SourceId="1" SourceUrl="http://localhost:49903/BoxCalService.svc?wsdl" />
-    <MetadataFile FileName="BoxCalService1.xsd" MetadataType="Schema" ID="c09daeb7-88e5-4636-abb9-790a33592901" SourceId="1" SourceUrl="http://localhost:49903/BoxCalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BoxCalService.wsdl" MetadataType="Wsdl" ID="327c6c64-1e4d-49ab-b92f-6c9681c34b06" SourceId="1" SourceUrl="http://boxvolumecaltrialexameasw20171023120355.azurewebsites.net/BoxCalService.svc?wsdl" />
+    <MetadataFile FileName="BoxCalService.xsd" MetadataType="Schema" ID="6934a1bb-2156-43fd-9dc2-ffc708b0cc85" SourceId="1" SourceUrl="http://boxvolumecaltrialexameasw20171023120355.azurewebsites.net/BoxCalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BoxCalService1.xsd" MetadataType="Schema" ID="f26803ce-51a1-4cec-9edf-53c3302daa06" SourceId="1" SourceUrl="http://boxvolumecaltrialexameasw20171023120355.azurewebsites.net/BoxCalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BoxCalService2.xsd" MetadataType="Schema" ID="b49c38d6-812f-4572-8a99-ffed2743c946" SourceId="1" SourceUrl="http://boxvolumecaltrialexameasw20171023120355.azurewebsites.net/BoxCalService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

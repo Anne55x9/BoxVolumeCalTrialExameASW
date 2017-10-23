@@ -9,7 +9,118 @@
 //------------------------------------------------------------------------------
 
 namespace CalBoxConsumer_Client.BoxCalServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BoxCalRequest", Namespace="http://schemas.datacontract.org/2004/07/BoxVolumeCalTrialExameASW")]
+    [System.SerializableAttribute()]
+    public partial class BoxCalRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double HeightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double LengthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RequestField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double VolumeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double WidthField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Height {
+            get {
+                return this.HeightField;
+            }
+            set {
+                if ((this.HeightField.Equals(value) != true)) {
+                    this.HeightField = value;
+                    this.RaisePropertyChanged("Height");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Length {
+            get {
+                return this.LengthField;
+            }
+            set {
+                if ((this.LengthField.Equals(value) != true)) {
+                    this.LengthField = value;
+                    this.RaisePropertyChanged("Length");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Request {
+            get {
+                return this.RequestField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RequestField, value) != true)) {
+                    this.RequestField = value;
+                    this.RaisePropertyChanged("Request");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Volume {
+            get {
+                return this.VolumeField;
+            }
+            set {
+                if ((this.VolumeField.Equals(value) != true)) {
+                    this.VolumeField = value;
+                    this.RaisePropertyChanged("Volume");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Width {
+            get {
+                return this.WidthField;
+            }
+            set {
+                if ((this.WidthField.Equals(value) != true)) {
+                    this.WidthField = value;
+                    this.RaisePropertyChanged("Width");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BoxCalServiceReference.IBoxCalService")]
@@ -32,6 +143,12 @@ namespace CalBoxConsumer_Client.BoxCalServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBoxCalService/InsertBoxCalRequest", ReplyAction="http://tempuri.org/IBoxCalService/InsertBoxCalRequestResponse")]
         System.Threading.Tasks.Task InsertBoxCalRequestAsync(string request, double volume, double length, double width, double height);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBoxCalService/GetAllRequest", ReplyAction="http://tempuri.org/IBoxCalService/GetAllRequestResponse")]
+        CalBoxConsumer_Client.BoxCalServiceReference.BoxCalRequest[] GetAllRequest();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBoxCalService/GetAllRequest", ReplyAction="http://tempuri.org/IBoxCalService/GetAllRequestResponse")]
+        System.Threading.Tasks.Task<CalBoxConsumer_Client.BoxCalServiceReference.BoxCalRequest[]> GetAllRequestAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +200,14 @@ namespace CalBoxConsumer_Client.BoxCalServiceReference {
         
         public System.Threading.Tasks.Task InsertBoxCalRequestAsync(string request, double volume, double length, double width, double height) {
             return base.Channel.InsertBoxCalRequestAsync(request, volume, length, width, height);
+        }
+        
+        public CalBoxConsumer_Client.BoxCalServiceReference.BoxCalRequest[] GetAllRequest() {
+            return base.Channel.GetAllRequest();
+        }
+        
+        public System.Threading.Tasks.Task<CalBoxConsumer_Client.BoxCalServiceReference.BoxCalRequest[]> GetAllRequestAsync() {
+            return base.Channel.GetAllRequestAsync();
         }
     }
 }

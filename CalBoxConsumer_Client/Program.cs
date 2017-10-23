@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CalBoxConsumer_Client.BoxCalServiceReference;
 
 namespace CalBoxConsumer_Client
 {
@@ -22,6 +23,11 @@ namespace CalBoxConsumer_Client
 
                 client.InsertBoxCalRequest("volume",8,2,2,2);
 
+                BoxCalRequest[] allrequest = client.GetAllRequest();
+                foreach (var reg in allrequest)
+                {
+                    Console.WriteLine(reg.Request);
+                }
             }
 
             Console.ReadLine();

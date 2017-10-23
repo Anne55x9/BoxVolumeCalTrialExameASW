@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://boxvolumecaltrialexameasw20171023120355.azurewebsites.net/BoxCalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BoxVolumeCalTrialExameASW" />
+  <xs:element name="GetVolume">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="length" type="xs:double" />
+        <xs:element minOccurs="0" name="width" type="xs:double" />
+        <xs:element minOccurs="0" name="height" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVolumeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVolumeResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="volume" type="xs:double" />
+        <xs:element minOccurs="0" name="side1" type="xs:double" />
+        <xs:element minOccurs="0" name="side2" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSideResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSideResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBoxCalRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="request" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="volume" type="xs:double" />
+        <xs:element minOccurs="0" name="length" type="xs:double" />
+        <xs:element minOccurs="0" name="width" type="xs:double" />
+        <xs:element minOccurs="0" name="height" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBoxCalRequestResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BoxVolumeCalTrialExameASW" minOccurs="0" name="GetAllRequestResult" nillable="true" type="q1:ArrayOfBoxCalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
