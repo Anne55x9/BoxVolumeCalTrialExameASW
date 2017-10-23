@@ -37,30 +37,6 @@ namespace BoxVolumeCalTrialExameASW
         {
             return volume / (side1 * side2);
         }
-
-        /// <summary>
-        /// To metoder som er default generet i wcf projektet. Jeg undlader at slette dem.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }
-
         
     }
 }

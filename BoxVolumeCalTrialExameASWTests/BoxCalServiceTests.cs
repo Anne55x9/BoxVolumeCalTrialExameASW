@@ -14,7 +14,33 @@ namespace BoxVolumeCalTrialExameASW.Tests
         [TestMethod()]
         public void GetVolumeTest()
         {
-            Assert.Fail();
+            //Arrange
+
+            BoxCalService service = new BoxCalService();
+
+            //Act
+
+            //service.GetVolume(2, 2, 2);
+
+            //Assert
+
+            Assert.AreEqual(8, service.GetVolume(2, 2, 2));
+        }
+
+        [TestMethod()]
+        public void GetSideTest()
+        {
+            //Arrange
+
+            BoxCalService service = new BoxCalService();
+
+            //Act
+
+            //service.GetSide(8,2,2);
+
+            //Assert
+
+            Assert.AreEqual(2, service.GetSide(8,2,2));
         }
     }
 }
