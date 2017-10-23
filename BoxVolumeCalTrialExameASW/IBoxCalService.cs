@@ -12,6 +12,26 @@ namespace BoxVolumeCalTrialExameASW
     [ServiceContract]
     public interface IBoxCalService
     {
+        /// <summary>
+        /// To metoder i Service klassen som indeholder 3 lokale parametre og retunere enten en boks volume
+        /// eller en manglende side af boksen hvis 2 sider kendes. 
+        /// </summary>
+        /// <param name="length"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <returns></returns>
+        [OperationContract]
+        double GetVolume(double length,double width,double height);
+
+        [OperationContract]
+        double GetSide(double volume, double side1, double side2);
+
+
+        /// <summary>
+        /// Metoder som per default generes i wcf server applikation projekter. Undlader at slette. 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
 
         [OperationContract]
         string GetData(int value);
