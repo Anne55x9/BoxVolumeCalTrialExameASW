@@ -102,6 +102,11 @@ namespace BoxVolumeCalTrialExameASW
             }
         }
 
+        /// <summary>
+        /// Metode til at læse et objekt. 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private static BoxCalRequest ReadRequest(IDataRecord reader)
         {
             
