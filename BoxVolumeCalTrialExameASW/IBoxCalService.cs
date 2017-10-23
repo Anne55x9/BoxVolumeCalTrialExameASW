@@ -26,7 +26,8 @@ namespace BoxVolumeCalTrialExameASW
         [OperationContract]
         double GetSide(double volume, double side1, double side2);
 
-        
+        [OperationContract]
+        void InsertBoxCalRequest(String request, double volume, double length, double width, double height);
     }
 
 

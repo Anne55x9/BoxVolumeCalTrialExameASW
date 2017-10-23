@@ -26,6 +26,12 @@ namespace CalBoxConsumer_Client.BoxCalServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBoxCalService/GetSide", ReplyAction="http://tempuri.org/IBoxCalService/GetSideResponse")]
         System.Threading.Tasks.Task<double> GetSideAsync(double volume, double side1, double side2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBoxCalService/InsertBoxCalRequest", ReplyAction="http://tempuri.org/IBoxCalService/InsertBoxCalRequestResponse")]
+        void InsertBoxCalRequest(string request, double volume, double length, double width, double height);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBoxCalService/InsertBoxCalRequest", ReplyAction="http://tempuri.org/IBoxCalService/InsertBoxCalRequestResponse")]
+        System.Threading.Tasks.Task InsertBoxCalRequestAsync(string request, double volume, double length, double width, double height);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace CalBoxConsumer_Client.BoxCalServiceReference {
         
         public System.Threading.Tasks.Task<double> GetSideAsync(double volume, double side1, double side2) {
             return base.Channel.GetSideAsync(volume, side1, side2);
+        }
+        
+        public void InsertBoxCalRequest(string request, double volume, double length, double width, double height) {
+            base.Channel.InsertBoxCalRequest(request, volume, length, width, height);
+        }
+        
+        public System.Threading.Tasks.Task InsertBoxCalRequestAsync(string request, double volume, double length, double width, double height) {
+            return base.Channel.InsertBoxCalRequestAsync(request, volume, length, width, height);
         }
     }
 }

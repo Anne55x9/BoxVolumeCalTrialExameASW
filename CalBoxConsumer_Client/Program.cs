@@ -20,6 +20,8 @@ namespace CalBoxConsumer_Client
 
                 Console.WriteLine("Boksens manglende side er:" + client.GetSide(8,2,2));
 
+                client.InsertBoxCalRequest("volume",8,2,2,2);
+
             }
 
             Console.ReadLine();
